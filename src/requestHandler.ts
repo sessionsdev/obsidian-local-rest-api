@@ -48,7 +48,7 @@ export default class RequestHandler {
   ) {
     this.app = app;
     this.manifest = manifest;
-    this.api = express();
+    this.api = express({ limit: '10mb' });
     this.settings = settings;
 
     this.api.set("json spaces", 2);
